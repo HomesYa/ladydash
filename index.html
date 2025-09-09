@@ -1,104 +1,287 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Lady Dash™ — Dating services; internet-based social networking, introduction and dating services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Lady Dash™ provides dating services; internet-based social networking, introduction and dating services (IC 45). Join now or book a free introduction call." />
-  <meta name="theme-color" content="#7a0f16" />
-  lady-dash-logo.jpg
-  <style>
-    :root{--brand:#7a0f16;--ink:#111827;--muted:#6b7280;--bg:#f8fafc;--card:#ffffff}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-    .wrap{max-width:960px;margin:auto;padding:24px}
-    /* Header with prominent logo */
-    header{margin-bottom:18px}
-    .mast{background:radial-gradient(1200px 400px at 50% -50%, #a81f27 0%, #7a0f16 55%, #3b0a0d 100%);border-radius:16px;padding:28px;border:1px solid #4b0f12}
-    .mast-logo{display:block;margin:0 auto 12px auto;max-width:520px;width:min(85%,520px);height:auto;filter: drop-shadow(0 8px 20px rgba(0,0,0,.35))}
-    .mast-title{display:none} /* text title hidden since logo is the hero */
-    nav{display:flex;justify-content:center;gap:18px;margin-top:10px}
-    nav a{color:#ffd7cf;text-decoration:none;font-weight:700;background:rgba(255,255,255,.1);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25)}
-    .hero,.panel{background:var(--card);border:1px solid #e5e7eb;border-radius:12px;padding:20px}
-    h1{font-size:1.6rem;margin:.25rem 0 0}
-    .subtitle{color:var(--muted);margin:.5rem 0 1rem}
-    .btn{display:inline-block;background:var(--brand);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
-    .ghost{background:#fff;border:2px solid var(--brand);color:var(--brand)}
-    .grid{display:grid;gap:14px}
-    .cols-2{grid-template-columns:1fr 1fr}
-    @media (max-width:800px){.cols-2{grid-template-columns:1fr}}
-    footer{margin-top:22px;color:var(--muted);font-size:.92rem}
-    .specimen{margin-top:10px;padding:10px;border:1px dashed #94a3b8;border-radius:8px;background:#f1f5f9;color:#0f172a}
-    .print-btn{float:right}
-    @media print{nav,.print-btn,.ghost{display:none!important}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lady Dash™ - Dating Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #981E22;
+            --accent-gold: #D4AF37;
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --background-content: #FFFDF8; /* Changed for content sections */
+            --border-color: #eee;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+            background-color: var(--primary-red); /* SET MAIN BODY BACKGROUND TO RED */
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto; /* Added margin to push content slightly from top/bottom */
+            padding: 20px;
+            background-color: var(--background-content); /* Content area remains light */
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .logo-container { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { 
+            width: 80px; /* Reduced logo size */
+            height: auto; 
+            margin-right: 15px; 
+        }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 2em; color: var(--primary-red); }
+        nav { display: flex; gap: 25px; }
+        nav a { text-decoration: none; color: var(--dark-text); font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary-red); }
+        
+        main section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        main section:last-of-type {
+            border-bottom: none; /* No border for the last section */
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--primary-red); }
+        h1 { font-size: 3em; text-align: center; margin-bottom: 0.5em;}
+        h2 { font-size: 2.5em; }
+        p { max-width: 65ch; }
+        .text-center { text-align: center; margin-left: auto; margin-right: auto; }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .button:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .button-primary { background-color: var(--primary-red); color: var(--light-text); }
+        .button-secondary { background-color: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); }
+        .button-gold { background-color: var(--accent-gold); color: var(--light-text); }
+        .cta-buttons { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
+
+        .specimen-notice {
+            background-color: #fcf8e3; /* Light yellow background */
+            border: 1px solid #fbeed5;
+            color: #c09853; /* Darker yellow text */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .signup-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            max-width: 500px;
+            margin: 30px auto;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Important */
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .feature-card { padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .feature-card h3 { margin-top: 0; color: var(--dark-text); font-family: 'Inter', sans-serif; font-size: 1.2em; font-weight: 700;}
+
+        .pricing-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px; 
+            margin-top: 30px;
+        }
+        .pricing-grid .feature-card {
+             text-align: center;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
+        }
+        .pricing-grid .feature-card p.price {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin: 10px 0;
+        }
+
+        footer { padding: 40px 0; text-align: center; font-size: 0.9em; color: #666; }
+        .print-button { margin-bottom: 20px; }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <header role="banner" class="mast">
-      <!-- PROMINENT LOGO -->
-      <img src="lady-dash-logo.jpg" alt="Lady Dash logo" class="™</div>
-      <nav aria-label="Primary">
-        #howHow it works</a>
-        #pricingPricing</a>
-        #contactContact</a>
-      </nav>
-    </header>
+    <div class="container">
+        <header>
+            <a href="#" class="logo-container">
+                <img src="logo.jpg" alt="Lady Dash Logo" class="logo-img">
+                <span class="logo-text">Lady Dash&trade;</span>
+            </a>
+            <nav>
+                <a href="#how">How it works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#safety">Safety</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-    <main class="hero">
-      <div style="color:var(--brand);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem">
-        International Class 45 services
-      </div>
-      <h1>Lady Dash™ — Dating services; internet‑based social networking, introduction and dating services</h1>
-      <p class="subtitle">
-        Meet compatible people through guided introductions and a respectful online community. Join now or book a free consultation to begin.
-      </p>
-      <p>
-        <joinJoin now — start matching</a>
-        mailto:hello@ladydash.exampleBook a free intro call</a>
-      </p>
-    </main>
+        <main>
+            <section id="hero">
+                <h1 class="text-center">International Class 45 Services</h1>
+                <p class="text-center"><strong>Lady Dash&trade;</strong> — Dating services; internet-based social networking, introduction and dating services.</p>
+                <p class="text-center">Meet compatible people with curated introductions and a respectful online community. Join now or book a free consultation to begin.</p>
+                <div class="cta-buttons">
+                    <a href="#signup" class="button button-primary">Join now — start matching</a>
+                    <a href="#consult" class="button button-secondary">Book an intro call</a>
+                </div>
+                <div class="specimen-notice">
+                    <p><strong>Direct association:</strong> the Lady Dash&trade; mark appears with the Class 45 services above.</p>
+                    <p><strong>Access:</strong> sign‑up and booking show how the services are obtained.</p>
+                </div>
+            </section>
+            
+            <section id="signup">
+                <form class="signup-form">
+                    <h2 class="text-center">Create your account (18+)</h2>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="looking-for">Looking for…</label>
+                        <select id="looking-for" name="looking-for">
+                            <option>Women</option>
+                            <option>Men</option>
+                            <option>Everyone</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="button button-primary" style="width: 100%;">Create account</button>
+                    <p style="font-size: 0.8em; text-align: center; margin-top: 15px;">By creating an account you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>. Service is for adults 18+.</p>
+                </form>
+            </section>
 
-    <section id="how" style="margin-top:20px">
-      <h2>How it works</h2>
-      <div class="grid cols-2">
-        <div class="panel"><strong>1) Tell us your goals</strong><br><span class="subtitle">Introductions or online social networking.</span></div>
-        <div class="panel"><strong>2) Get matched</strong><br><span class="subtitle">We surface compatible profiles and schedule introductions.</span></div>
-      </div>
-    </section>
-
-    <section id="pricing" style="margin-top:20px">
-      <h2>Pricing</h2>
-      <div class="panel"><strong>Community (Free)</strong> — Create a profile and message with basic filters.<br>
-      <strong>Introductions (Pro)</strong> — Priority matching & curated intros.</div>
-    </section>
-
-    <section id="contact" style="margin-top:20px">
-      <h2>Contact</h2>
-      <div class="panel">Support: mailto:support@ladydash.examplesupport@ladydash.example</a> • (555) 555‑5555</div>
-    </section>
-
-    <footer>
-      <button class="btn ghost print-btn" onclick="window.print()">Print Specimen</button>
-      <div><strong>Lady Dash™</strong> — Dating services; internet‑based social networking, introduction and dating services (IC 45).</div>
-      <div class="specimen" aria-label="Specimen metadata">
-        <strong>Webpage Specimen Info</strong><br/>
-        URL: <span id="specimen-url">…</span><br/>
-        Access/Print date: <span id="specimen-date">…</span>
-      </div>
-      <div class="legal">© <span id="year"></span> Lady Dash. All rights reserved.</div>
-    </footer>
-  </div>
-
-  <script>
-    const urlEl = document.getElementById('specimen-url');
-    const dateEl = document.getElementById('specimen-date');
-    const yearEl = document.getElementById('year');
-    if (urlEl) urlEl.textContent = window.location.href;
-    const stamp = new Date().toLocaleString();
-    if (dateEl) dateEl.textContent = stamp;
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-    window.addEventListener('beforeprint', () => { if (dateEl) dateEl.textContent = new Date().toLocaleString(); });
-  </script>
+            <section id="how">
+                <h2 class="text-center">How it works</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>1) Tell us your goals</h3>
+                        <p>Share your preferences for introductions or online social networking.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>2) Get matched</h3>
+                        <p>Our team and tools surface compatible profiles and schedule introductions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>3) Connect safely</h3>
+                        <p>Chat in‑app, meet in public places, and use our safety features and tips.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="pricing">
+                <h2 class="text-center">Pricing</h2>
+                <div class="pricing-grid">
+                    <div class="feature-card">
+                        <h3>Community (Free)</h3>
+                        <p>Create a profile, browse, and message with basic filters.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Introductions (Pro)</h3>
+                        <p class="price">$49/mo</p>
+                        <p>Priority matching, curated intros, and a monthly consultation.</p>
+                        <a href="#signup" class="button button-gold" style="margin-top: auto;">Start Pro</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="consult">
+                <h2 class="text-center">Book a free introduction call</h2>
+                <p class="text-center">Prefer to talk first? Schedule a 15‑minute call with our team to discuss your goals.</p>
+                <div class="text-center">
+                    <a href="mailto:hello@ladydash.example" class="button button-secondary">Email us to schedule</a>
+                </div>
+            </section>
+            
+            <section id="safety">
+                <h2 class="text-center">Eligibility & Safety</h2>
+                <ul style="max-width: 600px; margin: 0 auto;">
+                    <li><strong>Eligibility:</strong> Service is for adults 18+.</li>
+                    <li><strong>Meet safely:</strong> Meet in public locations; tell a friend your plans.</li>
+                    <li><strong>Report:</strong> In‑app reporting and email support at support@ladydash.example.</li>
+                </ul>
+            </section>
+            
+            <section id="contact" style="border-bottom: none;">
+                <h2 class="text-center">Contact & Support</h2>
+                <p class="text-center">Questions? Contact <a href="mailto:support@ladydash.example">support@ladydash.example</a> or (555) 555‑5555.</p>
+                <p class="text-center">Business address: 123 Example Ave, Suite 100, City, ST 90000.</p>
+            </section>
+        </main>
+        
+        <footer>
+            <button class="button button-secondary print-button" onclick="window.print()">Print Specimen</button>
+            <p><strong>Lady Dash&trade;</strong> — Dating services; internet‑based social networking, introduction and dating services (IC 45).</p>
+            <div class="specimen-info-footer">
+                <p><strong>URL:</strong> https://ladydash.netlify.app/ &nbsp;&nbsp;&nbsp; <strong>Access/Print date:</strong> September 8, 2025</p>
+            </div>
+            <p>&copy; 2025 Lady Dash. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Lady Dash",
+      "url": "https://ladydash.netlify.app",
+      "logo": "https://ladydash.netlify.app/logo.jpg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@ladydash.example"
+      },
+      "serviceOffered": {
+        "@type": "Service",
+        "serviceType": "Dating services; online social networking; introduction and dating services",
+        "areaServed": "US"
+      }
+    }
+    </script>
 </body>
 </html>
+
